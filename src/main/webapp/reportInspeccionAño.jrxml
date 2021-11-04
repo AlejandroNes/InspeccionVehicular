@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7591961-ea55-46bb-88b6-5660df7aa383">
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <parameter name="placa" class="java.lang.String">
+        <defaultValueExpression><![CDATA[]]></defaultValueExpression>
+    </parameter>
+    <queryString>
+		<![CDATA[SELECT i.*, a.placa 
+FROM inspeccion i
+INNER JOIN automovil a ON a.ruat=i.automovil_ruat
+WHERE a.placa=$P{placa} AND i.gestion="2021";]]>
+    </queryString>
+    <field name="cod_inspeccion" class="java.lang.Integer">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="fecha" class="java.sql.Date">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="lugar" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="mecanico" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="gestion" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="observacion" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="automovil_ruat" class="java.lang.Integer">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="placa" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="125" y="0" width="304" height="69" uuid="1979bf0f-1597-4440-8081-c0b3a1587e4e"/>
+                <textElement textAlignment="Center">
+                    <font size="26" isBold="true" isUnderline="false" isStrikeThrough="false"/>
+                </textElement>
+                <text><![CDATA[REPORTE INSPECCION AUTOMOVIL]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch">
+            <staticText>
+                <reportElement x="156" y="0" width="118" height="20" uuid="b69f5984-443a-405a-886b-a58ab44cfb3d"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[AUTOMOVIL (PLACA):]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="274" y="0" width="100" height="20" uuid="18ecf7ab-5e2e-434a-9953-df97aced15db"/>
+                <textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="28" splitType="Stretch">
+            <staticText>
+                <reportElement x="25" y="2" width="100" height="20" uuid="0ce2e53a-5ba1-4209-a88f-203e2d0ea77d"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Nº]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="74" y="2" width="100" height="20" uuid="40773c96-8e47-49d6-b604-3a87a5189530"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[FECHA]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="174" y="0" width="100" height="20" uuid="cb773468-7427-445b-b54a-31674c4170ed"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[LUGAR]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="296" y="2" width="100" height="20" uuid="f4613249-cbdf-477d-8d92-984478e2014c"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[MECANICO]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="409" y="2" width="100" height="20" uuid="7104f2c6-06c0-4d1e-a19b-8cea0ba679a0"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[OBSERVACION]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="27" splitType="Stretch">
+            <textField>
+                <reportElement x="25" y="0" width="100" height="20" uuid="eee405e6-0ee1-4cb2-94f0-c695780fc98a"/>
+                <textFieldExpression><![CDATA[$F{cod_inspeccion}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="74" y="0" width="100" height="20" uuid="cf990836-c666-4774-8fde-bc732b12118d"/>
+                <textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="174" y="0" width="100" height="20" uuid="61360e6f-d77e-4061-9ddd-2ceed5d19e10"/>
+                <textFieldExpression><![CDATA[$F{lugar}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="296" y="0" width="100" height="20" uuid="7e8bb6ad-4d6d-4dd8-9678-ea8d76147b63"/>
+                <textFieldExpression><![CDATA[$F{mecanico}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="409" y="0" width="100" height="20" uuid="3320dd93-0d8a-4330-a15c-ad93ef551dab"/>
+                <textFieldExpression><![CDATA[$F{observacion}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

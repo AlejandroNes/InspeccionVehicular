@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e1cc3f0d-4f7b-485a-ae7a-16dd2ee9f5d4">
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <queryString language="SQL">
+		<![CDATA[SELECT * FROM propietario]]>
+    </queryString>
+    <field name="cedula" class="java.lang.Integer">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="expedido" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="nombre" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="paterno" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="materno" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="147" y="23" width="266" height="37" uuid="d5180ed9-c391-4ae9-a869-1c1d776f5892"/>
+                <textElement textAlignment="Center">
+                    <font size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[REPORTE PROPIETARIO]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="41" splitType="Stretch">
+            <staticText>
+                <reportElement x="38" y="2" width="100" height="20" uuid="de63b210-0a65-4f37-bef9-a21a243051de"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[cedula]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="120" y="2" width="100" height="20" uuid="5eeefc80-9bbb-4296-a708-2fe005743f3c"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[expedido]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="202" y="0" width="100" height="20" uuid="efc345bc-defb-4aac-8597-cb5d5a26a1f3"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[nombre]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="302" y="2" width="100" height="20" uuid="3a98b769-7bf9-48cd-8a11-256d1b3a28b3"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[paterno]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="427" y="2" width="100" height="20" uuid="34dece94-f9e7-4e46-a47f-4f328848c683"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[materno]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="33" splitType="Stretch">
+            <textField>
+                <reportElement x="38" y="0" width="100" height="20" uuid="dcfb6dfd-bc1c-4e50-a590-5e49ce932474"/>
+                <textFieldExpression><![CDATA[$F{cedula}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="120" y="0" width="100" height="20" uuid="88a4ff1b-6e52-4bcd-a59b-3382edeebc5b"/>
+                <textFieldExpression><![CDATA[$F{expedido}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="202" y="0" width="100" height="20" uuid="ffbff82e-3c4e-4316-91fa-95d2d6d00615"/>
+                <textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="302" y="0" width="100" height="20" uuid="3c697e8a-dbf5-4297-b75f-0cc452240e3a"/>
+                <textFieldExpression><![CDATA[$F{paterno}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="427" y="0" width="100" height="20" uuid="758eac80-5618-4203-80ba-c0151dcda0ae"/>
+                <textFieldExpression><![CDATA[$F{materno}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
